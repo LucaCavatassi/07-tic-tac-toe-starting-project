@@ -5,8 +5,8 @@ export default function Player({name, symbol}) {
 
   // console.log(isEdit);
   
-  function handleButton(bool){
-    setEditing(bool)
+  function handleButton(){
+    setEditing(true)
   }
   
   console.log(isEditing);
@@ -18,7 +18,7 @@ export default function Player({name, symbol}) {
               <input type="text" />
               <span className="player-symbol"> {symbol} </span> 
             </span>
-            <button onClick={() => handleButton(true)}>Edit</button>
+            <button onClick={handleButton}>Edit</button>
       </li>
     )
   } else {
