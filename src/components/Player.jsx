@@ -9,28 +9,20 @@ export default function Player({name, symbol}) {
     setEditing(true)
   }
   
-  console.log(isEditing);
-
-  if (isEditing === true) {
-    return (
-      <li>
-            <span className="player">
-              <input type="text" />
-              <span className="player-symbol"> {symbol} </span> 
-            </span>
-            <button onClick={handleButton}>Edit</button>
-      </li>
-    )
-  } else {
+  let editPlayer = <span className="player-name"> {name}</span> 
+              
+  if (isEditing) {
+    editPlayer = <input type="text" required />
+  }
+  
     return (
         <li>
             <span className="player">
-              <span className="player-name"> {name}</span> 
+              {editPlayer}
               <span className="player-symbol"> {symbol} </span> 
             </span>
             <button onClick={() => handleButton(true)}>Edit</button>
         </li>
     )
-  }
 
 }
