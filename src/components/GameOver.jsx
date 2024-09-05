@@ -1,4 +1,4 @@
-export default function GameOver({winner, onRestart}) {
+export default function GameOver({winner, onRestart, playerName}) {
 
     
     return (
